@@ -156,6 +156,11 @@ p {
 	line-height: 1.25;
 }
 
+img {
+	width: 100%;
+	height: auto;
+}
+
 .container {
 	max-width: 800px;
 	margin: 0 auto;
@@ -220,6 +225,13 @@ header .logo {
 	border-bottom: 1px solid black;
 }
 
+@media (max-width: 800px) {
+	.banner {
+		width: 90%;
+		margin-left: 35px;
+	}
+}
+
 .banner .banner-text {
 	display: flex;
 	flex-direction: column;
@@ -250,16 +262,6 @@ header .logo {
 	color: white;
 }
 
-.top-banner {
-	margin: 30px 0;
-	padding-bottom: 20px;
-	border-bottom: 1px solid black;
-}
-
-.top-banner img {
-	margin-bottom: 20px;
-}
-
 /* Main content styles */
 
 .main-content {
@@ -267,46 +269,23 @@ header .logo {
 	border-bottom: 1px solid black;
 }
 
+@media (max-width: 800px) {
+	.main-content {
+		width: 90%;
+		margin-left: 35px;
+	}
+}
+
 .main-content .top-content {
 	display: flex;
 	justify-content: space-around;
-
 	margin: 10px 0 30px 0;
 }
 
 .main-content .bottom-content {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	margin: 30px 0 30px 0;
-}
-
-/* Mid-content styles */
-
-.mid-content {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	border-bottom: 1px solid black;
-	padding-bottom: 10px;
-}
-
-.mid-content .card {
-	width: 48%;
-	height: 200px;
-	border: 1px solid black;
-	background: rgb(243, 241, 241);
-	padding: 15px 10px 10px 10px;
-	margin-bottom: 30px;
-}
-
-.card button {
-	background: white;
-	margin-top: 8px;
-	padding: 8px 40px;
-	font-size: 12px;
-	border: 1px solid black;
-	border-radius: 3px;
-	cursor: pointer;
 }
 
 /* Bottom content styles */
