@@ -231,9 +231,14 @@ header nav a {
 	header nav a {
     margin-right: 0;
     width: 100%;
-    
-    text-align: center;
-  }
+		text-align: center;
+		padding: 14px 0;
+		font-size: 18px;
+		border-bottom: 1px solid lightgray;
+	}
+	header nav a:first-child {
+		border-top: 1px solid lightgray;
+	}
 }
 
 header nav a:hover {
@@ -242,6 +247,13 @@ header nav a:hover {
 
 header .logo {
 	margin-top: 25px;
+}
+
+@media (max-width: 500px) {
+	header .logo {
+		margin-top: 20px;
+		margin-bottom: 25px;
+	}
 }
 
 /* Top content styles */
@@ -260,6 +272,7 @@ header .logo {
 		width: 97%;
 		margin-left: 10px;
 		padding-bottom: 75px;
+		border-bottom: 2px solid black;
 	}
 }
 
@@ -309,7 +322,12 @@ header .logo {
 	.main-content {
 		width: 97%;
 		margin: 40px 0 35px 10px;
-		/* padding-bottom: 10px; */
+	}
+}
+
+@media (max-width: 500px) {
+	.main-content {
+			border-bottom: 2px solid black;
 	}
 }
 
@@ -317,6 +335,16 @@ header .logo {
 	display: flex;
 	justify-content: space-around;
 	margin: 10px 0 30px 0;
+}
+
+@media (max-width: 500px) {
+	.main-content .top-content {
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.top-content .first-text {
+		margin-bottom: 30px;
+	}
 }
 
 @media (max-width: 800px) {
@@ -349,6 +377,15 @@ header .logo {
     width: 27%;
     margin-right: 50px;
 	}
+}
+
+@media (max-width: 500px)  {
+	.main-content .bottom-content div {
+		width: 100%;
+	}
+	/* .bottom-content .mid-text {
+		margin: 30px 0;
+	} */
 }
 
 /* Bottom content styles */
