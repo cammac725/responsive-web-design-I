@@ -172,6 +172,7 @@ header {
 	header {
 		flex-direction: column-reverse;
 		align-items: center;
+		margin-top: 10px;
 	}
 }
 
@@ -182,9 +183,10 @@ header nav {
 
 @media (max-width: 800px) {
 	header nav {
-		width: 100%;
+		width: 97%;
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-between;
+		margin-top: 50px;
 	}
 }
 
@@ -197,7 +199,8 @@ header nav a {
 
 @media (max-width: 800px) {
 	header nav a {
-		margin: 0;
+		margin: ;
+		font-size: 17px;
 	}
 }
 
@@ -222,8 +225,9 @@ header .logo {
 
 @media (max-width: 800px) {
 	.banner {
-		width: 90%;
-		margin-left: 35px;
+		width: 97%;
+		margin-left: 10px;
+		padding-bottom: 75px;
 	}
 }
 
@@ -237,6 +241,12 @@ header .logo {
 }
 
 @media (max-width: 800px) {
+	.banner .banner-text {
+		margin-top: 20px;
+	}
+}
+
+@media (max-width: 800px) {
 	.banner img {
 		display: none;
 	}
@@ -244,9 +254,8 @@ header .logo {
 
 .banner .banner-text button {
 	background: white;
-
 	margin-top: 6px;
-	padding: 8px 44px;
+	padding: 6px 42px;
 	font-size: 17px;
 	border: 1px solid black;
 	cursor: pointer;
@@ -266,8 +275,9 @@ header .logo {
 
 @media (max-width: 800px) {
 	.main-content {
-		width: 90%;
-		margin-left: 35px;
+		width: 97%;
+		margin: 40px 0 35px 10px;
+		/* padding-bottom: 10px; */
 	}
 }
 
@@ -278,21 +288,34 @@ header .logo {
 }
 
 @media (max-width: 800px) {
+	.main-content .top-content p {
+		line-height: 1.18;
+	}
+}
+
+@media (max-width: 800px) {
 	.main-content img {
 		width: 100%;
 		height: auto;
+		margin-top: 18px;
 	}
 }
 
 .main-content .bottom-content {
 	display: flex;
 	justify-content: space-around;
-	margin: 30px 0 30px 0;
+	margin: 30px 0px 30px 0;
 }
 
 @media (max-width: 800px) {
+	.main-content .bottom-content {
+    justify-content: flex-start;
+  }
+
+@media (max-width: 800px) {
 	.main-content .bottom-content div {
-		width: 30%;
+    width: 27%;
+    margin-right: 50px;
 	}
 }
 
@@ -325,9 +348,9 @@ header .logo {
 
 @media (max-width: 800px) {
 	.contact-section {
-		width: 90%;
-		margin-left: 35px;
-		margin-bottom: 40px;
+		width: 97%;
+		margin-left: 10px;
+		margin-bottom: 32px;
 	}
 }
 
