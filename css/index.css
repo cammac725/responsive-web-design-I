@@ -1,3 +1,472 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+/* ol, ul {
+	list-style: none;
+} */
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	font-family: 'Titillium Web', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: 'Bangers', cursive;
+	letter-spacing: 1px;
+	margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+p {
+	line-height: 1.25;
+}
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+@media (max-width: 800px) {
+	.container {
+		max-width: 800px;
+	}
+}
+
+@media (max-width: 500px) {
+	.container {
+		max-width: 500px;
+	}
+}
+
+/* Header styles */
+
+header {
+	display: flex;
+	justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+	header {
+		flex-direction: column-reverse;
+		align-items: center;
+		margin-top: 10px;
+	}
+}
+
+@media (max-width: 500px) {
+	header {
+		flex-direction: column-reverse;
+		align-items: center;
+		margin-top: 0;
+	}
+}
+
+header nav {
+	margin-top: 35px;
+	width: 690px;
+}
+
+@media (max-width: 800px) {
+	header nav {
+		width: 97%;
+		display: flex;
+		justify-content: space-between;
+		margin-top: 50px;
+	}
+}
+
+@media (max-width: 500px) {
+	header nav {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 0;
+	}
+}
+
+header nav a {
+	margin-right: 50px;
+	text-decoration: none;
+	color: gray;
+	font-size: 14px;
+}
+
+@media (max-width: 800px) {
+	header nav a {
+		font-size: 17px;
+	}
+}
+
+@media (max-width: 500px) {
+	header nav a {
+		margin-right: 0;
+		width: 100%;
+		text-align: center;
+		padding: 14px 0;
+		font-size: 18px;
+		border-bottom: 1px solid lightgray;
+	}
+	header nav a:first-child {
+		border-top: 1px solid lightgray;
+	}
+}
+
+header nav a:hover {
+	text-decoration: underline;
+}
+
+header .logo {
+	margin-top: 25px;
+}
+
+@media (max-width: 500px) {
+	header .logo {
+		margin-top: 20px;
+		margin-bottom: 25px;
+	}
+}
+
+/* Top content styles */
+
+.banner {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 50px;
+	padding-bottom: 40px;
+	border-bottom: 1px solid black;
+}
+
+@media (max-width: 800px) {
+	.banner {
+		width: 97%;
+		margin-left: 10px;
+		padding-bottom: 75px;
+		border-bottom: 2px solid black;
+	}
+}
+
+.banner .banner-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 70px;
+	text-align: center;
+}
+
+@media (max-width: 800px) {
+	.banner .banner-text {
+		margin-top: 20px;
+	}
+}
+
+@media (max-width: 800px) {
+	.banner img {
+		display: none;
+	}
+}
+
+.banner .banner-text button {
+	background: white;
+	margin-top: 6px;
+	padding: 6px 42px;
+	font-size: 17px;
+	border: 1px solid black;
+	cursor: pointer;
+}
+
+.banner .banner-text button:hover {
+	background: black;
+	color: white;
+}
+
+/* Main content styles */
+
+.main-content {
+	margin: 30px 0 20px 0;
+	border-bottom: 1px solid black;
+}
+
+@media (max-width: 800px) {
+	.main-content {
+		width: 97%;
+		margin: 40px 0 35px 10px;
+	}
+}
+
+@media (max-width: 500px) {
+	.main-content {
+		border-bottom: 2px solid black;
+	}
+}
+
+.main-content .top-content {
+	display: flex;
+	justify-content: space-around;
+	margin: 10px 0 30px 0;
+}
+
+@media (max-width: 500px) {
+	.main-content .top-content {
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.top-content .first-text {
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 800px) {
+	.main-content .top-content p {
+		line-height: 1.18;
+	}
+}
+
+@media (max-width: 800px) {
+	.main-content img {
+		width: 100%;
+		height: auto;
+		margin-top: 18px;
+	}
+}
+
+.main-content .bottom-content {
+	display: flex;
+	justify-content: space-around;
+	margin: 30px 0px 30px 0;
+}
+
+@media (max-width: 800px) {
+	.main-content .bottom-content {
+		justify-content: flex-start;
+	}
+}
+
+@media (max-width: 500px) {
+	.main-content .bottom-content {
+		flex-direction: column;
+		justify-content: space-around;
+		align-content: center;
+	}
+}
+
+@media (max-width: 800px) {
+	.main-content .bottom-content div {
+		width: 27%;
+		margin-right: 50px;
+	}
+}
+
+@media (max-width: 500px) {
+	.main-content .bottom-content div {
+		width: 88%;
+	}
+	.bottom-content .mid-text {
+		margin: 30px 0;
+	}
+}
+
+/* Bottom content styles */
+
+.bottom-content {
+	display: flex;
+	justify-content: space-between;
+	margin: 30px 0 50px 0;
+}
+
+.bottom-content .text-content {
+	width: 48%;
+}
+
+.bottom-content .image-content {
+	width: 48%;
+}
+
+.bottom-content ul {
+	margin: 20px 0 0 0;
+	list-style-position: inside;
+}
+
+.bottom-content li {
+	padding: 5px;
+}
+
+/* contact section */
+
+@media (max-width: 800px) {
+	section.contact-section {
+		width: 97%;
+		margin-left: 20px;
+		margin-bottom: 32px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+.contact-section address {
+	line-height: 1.15;
+	margin-bottom: 5px;
+}
+
+.contact-section info {
+	line-height: 2;
+}
+
+footer {
+	width: 100%;
+	margin: 0 0 50px 0;
+}
+
+@media (max-width: 800px) {
+	footer {
+		margin-top: 40px;
+	}
+}
+
+@media (max-width: 500px) {
+	footer {
+		margin-bottom: 20px;
+	}
+}
+
+footer .footer-content {
+	text-align: center;
+}
