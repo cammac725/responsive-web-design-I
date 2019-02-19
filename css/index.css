@@ -429,7 +429,7 @@ header .logo {
 /* contact section */
 
 @media (max-width: 800px) {
-	.container .contact-section {
+	section.contact-section {
 		width: 97%;
 		margin-left: 20px;
 		margin-bottom: 32px;
@@ -447,8 +447,6 @@ header .logo {
 .contact-section info {
 	line-height: 2;
 }
-
-/* footer section */
 
 footer {
 	width: 100%;
